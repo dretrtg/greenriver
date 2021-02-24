@@ -1,0 +1,51 @@
+{
+  "name": "mmall_admin_fe",
+  "version": "1.0.0",
+  "description": "admin.happymmall.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "WEBPACK_ENV=dev webpack-dev-server --port 8086 --inline --secure false",
+    "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --port 8086 --inline --secure false",
+    "dist": "WEBPACK_ENV=online webpack -p",
+    "dist_win": "set WEBPACK_ENV=online && webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/god_bless_yesterday/admin-fe.git"
+  },
+  "author": "Rosen",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "hogan.js": "^3.0.2",
+    "rc-pagination": "^1.7.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-fileupload": "^2.4.0",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.1",
+    "sb-admin-2": "^3.3.8",
+    "simditor": "^2.3.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-beta.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^3.2.0",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}

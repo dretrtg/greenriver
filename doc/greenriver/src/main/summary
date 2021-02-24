@@ -1,0 +1,89 @@
+------------------------------------------------------------------------------------------------------------------------
+|注解
+|   @Controller---使用它标记在一个类上，dispatcher会扫描使用该注解类的方法，并检测该方法是否使用了@RequestMapping注解，加上RequestMapping注解的方法才是处理请求的处理器
+|   @Service-----会在注解里指定一个name，会将service实现装配到Bean里
+|   @RequestMapping----映射URL到控制器类或到控制器类方法
+|   @Responsebody----将Java对象转换为Json格式的数据
+|   @Autowired----spring容器有一个专门扫描autowired注解的处理器，扫描到时，就在IOC容器查找相应的Bean，并装配给该对象的属性
+|   @Override-----提示是否正确重写了父类的方法，提示作用
+|   @RequestParam----直接获取参数，get和post请求的参数会自动转换赋值到注解所注解的变量上
+|   @Json
+|   @JsonSerilized
+------------------------------------------------------------------------------------------------------------------------
+一、项目初始化篇
+1、数据库初始化
+2、jdk\tomcat\maven配置及初始化
+    ·首页project construct 找到JDK配置JDK
+    ·首页setting配置maven（搜索）
+    ·创建新项目选择maven，选择maven-  -webapp
+    ·在src的main文件夹下建java文件夹
+    ·试运行tomcat，配置tomcat问题及解决https://www.cnblogs.com/zslhg903/p/8444234.html
+3、.gitignore文件
+    git上传需要忽略的文件
+4、git过程
+    创建git仓库
+    touch README.md
+    touch .gitignore
+    git init
+    git status
+    git add .
+    git commit -am 'zhushi'
+    git remote add origin 仓库地址 //第一次与仓库连接，之后跳过
+    git push -u origin master//第一次需要，之后不需要
+    git pull//报错的话输入这条，同上一条
+    git push -u -f origin master//报错的话输入这条，强制推送
+    git push
+
+    git checkout -b v1.0 origin/master//建立分支，在分支上开发
+    git push origin HEAD -u
+5、pom文件
+    作用：导入jar包，全都配在dependencies下
+6、包结构
+    dao→service→controller
+    pojo→vo→controller
+    common
+    util工具包
+7、mybatis generater 配置
+    pom里写
+    generaterConfig.xml放到resource下，复制过来就行
+    同级目录新建datasource.properties,进行db配置
+    右侧maven，plugin，mybaties-gennerater，生成dao,mapper,pojo
+    creat-time和update-time在mapper修改成now()
+    作用：根据数据库自动生成pojo，dao，xml（dao层接口的实现）
+8、mybatis plugin
+    方便类名跳转
+9、mybatis pagehelper
+    github有源码
+10、springMVC
+    applicationContext(spring 容器主配置),applicationContext-datasource,greenriver.properties
+    web.xml,dispatcher-servlet.xml（spring MVC配置）
+11、logback,ftp配置
+12、autowiredbeanclass设置为warning，inspections
+13、spring pethospital/greenhouse官方案例学习
+二、用户模块
+1、userController写接口
+    前端发来.do请求，dispatcher拦截下来，传到controller执行service
+2、service
+1、IUserService.所有的方法返回的都是ServerResponse
+2、notblank认为空格为空
+3、各种注解，Controller，Service，RequestMapping,Responsebody,Autowired,Override，RequestParam
+4、HttpSession的使用
+5、前端后端数据的流动
+三、分类模块
+四、商品前台模块
+1、ResponseCode和其他message的区别，ResponseCode里定义了一些提示，在ServerResponse里定义了Success和Error的提示调用ResponseCode，因为success和error有很多变种，更清晰
+2、selectByprimarykey和selectByPrimaryKeySelective的区别，前者全部选择，空的为null，后者只选择非空字段
+3、PageHelper和PageInfo
+    只要涉及页面分页，都要写PageHelper（pagesize,pagenum）函数
+    pageInfo用于保存分好页的信息用于返回
+4、PageHelper的OrderBy是怎么实现的？
+5、文本上传
+    controller-->fileService-->ftpUtil
+    controller创建虚拟路径，在fileService里创建路径文件及路径目录，将文件放入，在FTPUtil将文件上传服务器，删除本地缓存的文件
+五、商品后台模块
+1、各个方法的逻辑
+2、selectByNameAndCategoryIds的mapper写法
+六、文件上传模块
+1、文件上传的流动路径
+    admin-fe/src/page/product/index/save.jsx
+    admin-fe/src/util/mm.jsx

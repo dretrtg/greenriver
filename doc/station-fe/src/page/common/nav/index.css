@@ -1,0 +1,45 @@
+/*
+* @Author: dretrtg
+* @Date:   2019-05-17 14:16:54
+* @Last Modified by:   dretrtg
+* @Last Modified time: 2019-07-28 20:10:21
+*/
+.nav{
+    background: #eee;
+    height: 70px;
+    line-height: 30px; 
+}
+/* 用户部分 */
+.nav .user{
+    float: right;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.nav .user.login{
+    display: none;
+}
+.nav .user .link{
+    margin-right: 5px;
+}
+/* 导航链接部分 */
+
+.nav .nav-list{
+    float: none;
+    padding-left: 0;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.nav .nav-list .nav-item{
+    display: inline-block;
+    padding-left: 30px;
+    float: none;
+    vertical-align: middle;
+    background-color: 
+}
+.nav .nav-list .nav-img{
+    display: inline-block;
+    padding-left: 0;
+    vertical-align: middle;
+    float: none;
+}

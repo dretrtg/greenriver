@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <%= require('html-loader!./layout/head-common.html')  %>
+        <title><%= htmlWebpackPlugin.options.title%> - 青藏线垃圾调查项目</title>
+    </head>
+    <body>
+        <%= require('html-loader!./layout/nav.html')  %>
+        <%= require('html-loader!./layout/header.html')  %>
+
+        
+        <div class="w">
+            <ul class="content-list">
+                <li class="content-item">
+                    <a class="link" target="_blank" href="">
+                        <i class="fa fa-search"></i>            运单追踪
+                    </a>
+                        
+                </li>
+                <li class="content-item">
+                    <a class="link" target="_blank" href="gabage.html">
+                        <i class="fa fa-truck"></i>            
+                        我要寄件
+                    </a>
+                        
+                </li>
+                <li class="content-item">
+                    <a class="link" target="_blank" href="">
+                        <i class="fa fa-truck"></i>            
+                        时效查询
+                    </a>
+                </li>
+                <li class="content-item">
+                    <a class="link" target="_blank" href="">
+                        <i class="fa fa-truck"></i>            
+                        总站联系
+                    </a>
+                        
+                </li>
+            </ul>               
+        </div>
+            
+        <div class="w">
+            <div class="all_service_title">
+                <h1 class="title">
+                    青藏线垃圾调查介绍
+                </h1>
+                <h2 class="title1">基于志愿，融于志愿，通于志愿</h2>
+            </div>
+        </div>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+        
+        
+<!-- Swiper JS --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script> 
+        
+        <%= require('html-loader!./layout/footer.html')  %>
+    <!-- <a href="gabage.html">转详情页</a> -->
+    </body>
+</html>

@@ -1,0 +1,62 @@
+/*
+* @Author: dretrtg
+* @Date:   2019-05-18 19:30:20
+* @Last Modified by:   dretrtg
+* @Last Modified time: 2019-07-28 10:26:34
+*/
+/* 通用头部导航 */
+.header .logo{
+    position: absolute;
+    padding-top: 20px;
+    background: #fff;
+}
+
+.header .search-con{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    margin-top: 349px;
+    background: #fff;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.header .search-con .search-box{
+    padding: 20px;
+}
+.header .search-con .search-input{
+    position: relative;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border: 2px solid #005A31;
+    outline: none;
+}
+.header .search-con .search-btn{
+    position: absolute;
+    margin-left: -5px;
+    height: 44px;
+    width: 44px;
+    background-color: #005A31;
+}
+.header .search-con .search-btn1{
+    position: relative;
+    margin-left: 0px;
+    height: 44px;
+    width: 304px;
+    background-color: #005A31;
+}
+/* 面包屑导航 */
+.crumb{
+    margin-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #c60023;
+}

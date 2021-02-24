@@ -1,0 +1,16 @@
+一、项目初始化
+	到git仓库拉取仓库,建分支
+	npm init
+	npm install/uninstall xxx@xxx安装依赖
+	webpack
+	--save-dev可以省掉我们手动修改package.json文件的步骤。我们使用的一些打包工具、非项目必须依赖的都放在devDependencies中。
+
+	npm init填写参数
+	npm install -g webpack
+	npm install webpack --save-dev
+	新建webpack.config.js,搭建webpack
+二、通用工具
+	1、util/mm.js
+	2、view/layout/head-common.html
+	3、footer.html
+	4、layout.css
